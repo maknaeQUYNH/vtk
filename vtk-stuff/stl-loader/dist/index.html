@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Com S 402 Team 7</title>
+    <style>
+      :root {
+          --dark: #374151;
+          --darker: #1F2937;
+          --darkest: #090e19;
+          --grey: #6B7280;
+          --light: #ffffff;
+          --pink: #EC4899;
+          --purple: #8B5Cf6;
+      }
+   
+      h2 {
+        font-size: 2rem;
+        font-weight: 200;
+        color: rgb(255, 255, 255);
+        margin: auto;
+        text-align: center;
+        padding: 30px;
+       
+      }
+      #h2 {animation-timing-function: linear;}
+      @keyframes mymove {
+        from {left: 100px;}
+        to {left: 0;}
+      }
+
+      @keyframes mymove3 {
+        from {left: 1000px;}
+        to {left: 0;}
+      }
+
+      @keyframes mymove2 {
+        from {right: 1000px;}
+        to {right: 0;}
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        background: linear-gradient(to top, var(--darkest), var(--light));
+        color: #fff;
+        margin: auto;
+        overflow-x: hidden;
+      }
+
+      #file-submit-form{
+          display: flex;
+      }
+
+      #file-submit-input {
+          flex: 1 1 0%;
+          background-color: var(--darker);
+          padding: 1rem;
+          border-radius: 1rem;
+          margin-right: 1rem;
+          color: var(--light);
+          font-size: 1.25rem;
+      }
+
+      #file-submit-input::placeholder {
+          color: var(--light);
+      }
+
+      #new-file-submit {
+          color: var(--pink);
+          font-size: 1.25rem;
+          background-image: linear-gradient(to right, var(--pink), var(--purple));
+          -webkit-background-clip: text;
+          /* -webkit-text-fill-color: transparent; */
+          cursor: pointer;
+          transition: 0.4s;
+      }
+
+      header{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10000;
+      }
+
+      ul{
+        list-style: none;
+        display: flex;
+        gap: 10%;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        position: relative;
+        animation: mymove 2s;
+        margin-right: 100px;
+      }
+
+      #ul {animation-timing-function: linear;}
+
+      div{
+        margin: auto;
+      }
+
+      .logo{
+        color: rgb(245, 120, 120);
+        font-weight: bold;
+        font-size: 45px;
+        margin-left: 30px;
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      #ul {animation-timing-function: linear;}
+      
+
+      a {
+        text-decoration:none;
+        cursor:pointer;
+        color: var(--darkest);
+        padding: 6px 12px;
+        border-radius: 20px;
+      }
+
+      a:hover:first-child{
+        background-color: transparent;
+      }
+
+      a:hover, 
+      a.active{
+        background-color: rgb(245, 120, 120);
+
+      }
+
+
+      #img {animation-timing-function: ease-in-out;}
+
+      section{
+        position: relative;
+        height: 100vh;
+        padding: 100px;
+        
+      }
+
+      section img {
+        position: absolute;
+        object-fit: contain;
+        pointer-events: none;
+        
+      }
+
+
+      section img#geo{
+        margin-right: 300px;
+        height: 200px;
+        animation: mymove2 2s;
+      }
+
+      section img#eff{
+        margin-left: 405px;
+        height: 700px;
+        animation: mymove2 2s;
+
+      }
+
+      section img#visual{
+        margin-left: 700px;
+        height: 700px;
+        animation: mymove3 2s;
+        
+      }
+
+      section img#visual2{
+        margin-top: 300px;
+        height: 400px;
+        animation: mymove3 2s;
+        
+
+      }
+
+      #text{
+        position: absolute;
+        color: #1F2937;
+        white-space: nowrap;
+        font-size: 7.5vw;
+        z-index: 9;
+        right: -10px;
+        /* margin-right: 10px;
+        margin-top: 10px; */
+      }
+      
+      #sample1{
+        height: 400px;
+      }
+
+      #sample2{
+        height: 400px;
+      }
+
+      #sample3{
+        height: 600px;
+      }
+
+      #button1{
+        margin-bottom: 100px;
+        height: 30px;
+        width: 100px;
+        align-self: center;
+        margin-top: 10px;
+
+      }
+
+      #button2{
+        margin-bottom: 100px;
+        height: 30px;
+        width: 100px;
+        align-self: center;
+        margin-top: 10px;
+      }
+
+      div{
+        margin-top: 20px;
+        justify-content: center;
+        margin: auto;
+        text-align: center;
+        height: fit-content;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Paraview</a>
+      <ul>
+        <li><a href="index.html" class="active"> Home </a></li>
+        <li><a href="home.html"> Geometry </a></li>
+        <li><a href="contour.html"> ContourPlots </a></li>
+        <li><a href="glyph.html"> Glyphs </a></li>
+      </ul>
+   </header>
+
+    <section>
+      <img src="img/photo.png" alt="" id="geo">
+      <img src="img/effiel.png" alt="" id="eff">
+      <h2 id="text">Visualize the data</h2>
+      <img src="img/visual.png" alt="" id="visual">
+      <img src="img/visual2.png" alt="" id="visual2">
+    </section>
+    <h2>
+      Team 7 is implementing a web widget that will automatically connect to the server when launched and allow the user to select files through the web widget so the user can easily juxtapose different data files as well as utilize all utilities of their current data visualization methods. The utilities include creating color maps, vectors, and Glyphs and being able to rotate the 3D visualization of this data. 
+    </h2>
+
+    <div>
+      <div>
+        <h1>Geometry Mode</h1>
+        <img src="img/towelsample.png" alt="" id="sample1">
+        <img src="img/cubesample.png" alt="" id="sample2">
+      </div>
+      <button onclick="window.location.href='/home.html';" id="button1">Explore</button>
+
+    <div id="visualmode">
+      <h1>Contour Plot Mode</h1>
+      <img src="img/planplot1.png" alt="" id="sample1">
+      <img src="img/planplot2.png" alt="" id="sample2">
+    </div>
+    <button id="button2" onclick="window.location.href='/index1.html';">Explore</button>
+  </div>
+
+  <div id="visualmode">
+    <h1>Glyph Mode</h1>
+    <img src="img/glyph.png" alt="" id="sample1">
+    <img src="img/glyph1.png" alt="" id="sample2">
+    
+  </div>
+  <button id="button2" onclick="window.location.href='/glyph.html';">Explore</button>
+</div>
+
+  </body>
+
+  <div>
+  </div>
+
+  <script>
+    let text = document.getElementById('text'); 
+    window.addEventListener('scroll', function() {
+      let value = window.scrollY; 
+      text.style.marginRight = value * 4 + 'px';
+      text.style.marginTop = value * 1.5 + 'px';
+      if(value * 1.5 > 2800)
+        text.style.marginTop = 2800 + "px";
+
+      console.log(text.style.marginTop)
+    })
+  </script>
+</html>
+
